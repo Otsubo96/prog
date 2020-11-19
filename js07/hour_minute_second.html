@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<h1>時/分/秒</h1>
+
+
+<select id="hour"></select>
+<select id="minute"></select>
+<select id="second"></select>
+
+
+
+
+<script>
+function hms(start, end, id){//ただの練習
+    let y = ""; 
+    for(let i=start; i<=end; i++){
+        y += '<option value="'+i+'">'+i+'</option>';
+    }
+    $(id).html(y);
+}
+hms(0, 23, "#hour");
+hms(0, 59, "#minute");
+hms(0, 59, "#second");
+
+
+const now = new Date();
+const h = now.getHours();
+const m = now.getMinutes();
+const s = now.getSeconds();
+
+const str = "現在時刻：";
+console.log( str +h+"時"+m+"分"+s+"秒");
+
+</script>
+<body>
+    
+    
+</body>
+</html>
